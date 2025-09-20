@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanzaIA - Crear Plan de Negocio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-chart-line"></i></span> FinanzaIA
+            </div>
+            <p class="tagline">Crea tu plan de negocio con inteligencia artificial</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h1><i class="fas fa-rocket"></i> Crear Plan de Negocio</h1>
+            <p class="subtitle">Comencemos con lo básico. Completa los detalles para obtener tu reporte personalizado.</p>
+            
+            <form id="businessForm" action="dashboard.html" method="get">
+                <div class="form-section">
+                    <h2><i class="fas fa-store"></i> Paso 1: Selecciona tu tipo de negocio</h2>
+                    <div class="business-types">
+                        <div class="business-type-card" data-type="cafeteria">
+                            <i class="fas fa-coffee"></i>
+                            <span>Cafetería</span>
+                        </div>
+                        <div class="business-type-card" data-type="tienda_online">
+                            <i class="fas fa-laptop"></i>
+                            <span>Tienda Online</span>
+                        </div>
+                        <div class="business-type-card" data-type="minimarket">
+                            <i class="fas fa-shopping-basket"></i>
+                            <span>Minimarket</span>
+                        </div>
+                        <div class="business-type-card" data-type="consultoria">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Consultoría</span>
+                        </div>
+                    </div>
+                    <input type="hidden" id="businessType" name="businessType" required>
+                </div>
+                
+                <div class="form-section">
+                    <h2><i class="fas fa-money-bill-wave"></i> Paso 2: Datos Financieros</h2>
+                    <div class="financial-grid">
+                        <div class="form-group">
+                            <label for="initialCapital">Capital Inicial (S/)</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                                <input type="number" id="initialCapital" name="initialCapital" required placeholder="Ej: 10000">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="fixedExpenses">Gastos Fijos Mensuales (S/)</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-money-bill"></i>
+                                <input type="number" id="fixedExpenses" name="fixedExpenses" required placeholder="Ej: 5500">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="expectedSales">Ventas Esperadas Mensuales (S/)</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-cash-register"></i>
+                                <input type="number" id="expectedSales" name="expectedSales" required placeholder="Ej: 12000">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="variableCosts">Gastos Variables por Venta (S/)</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-chart-pie"></i>
+                                <input type="number" id="variableCosts" name="variableCosts" step="0.01" required placeholder="Ej: 3.50">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit">
+                    <i class="fas fa-calculator"></i> Calcular Mi Plan
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

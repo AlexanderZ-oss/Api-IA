@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanzaIA - Dashboard de Resultados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-chart-line"></i></span> FinanzaIA
+            </div>
+            <p class="tagline">Dashboard de análisis financiero</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="dashboard-header">
+            <h1>Resumen Ejecutivo</h1>
+            <button id="backButton" class="btn-secondary">
+                <i class="fas fa-arrow-left"></i> Volver al Formulario
+            </button>
+        </div>
+
+        <div class="summary-cards">
+            <div class="summary-card">
+                <div class="summary-icon total-revenue">
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <div class="summary-content">
+                    <h3>Ingresos Totales</h3>
+                    <div class="summary-value" id="totalRevenue">S/15,400</div>
+                    <div class="summary-label">Ingresos operativos</div>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-icon operating-expenses">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <div class="summary-content">
+                    <h3>Gastos Operativos</h3>
+                    <div class="summary-value" id="operatingExpenses">S/9,800</div>
+                    <div class="summary-label">Gastos fijos + variables</div>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-icon net-profit">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="summary-content">
+                    <h3>Beneficio Neto</h3>
+                    <div class="summary-value" id="netProfit">S/5,600</div>
+                    <div class="summary-label">Después de gastos</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-column">
+                <div class="card">
+                    <h2><i class="fas fa-lightbulb"></i> Recomendaciones Generadas por IA</h2>
+                    <div id="aiRecommendations" class="recommendations-list">
+                        <!-- Las recomendaciones se cargarán con JavaScript -->
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2><i class="fas fa-chart-pie"></i> Proyección de Pérdidas y Ganancias</h2>
+                    <div class="chart-container">
+                        <canvas id="profitLossChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-column">
+                <div class="card">
+                    <h2><i class="fas fa-balance-scale"></i> Análisis de Punto de Equilibrio</h2>
+                    <div class="chart-container">
+                        <canvas id="breakEvenChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2><i class="fas fa-money-bill-trend-up"></i> Proyección de Flujo de Caja</h2>
+                    <div class="chart-container">
+                        <canvas id="cashFlowChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button id="downloadPdf" class="btn-primary">
+                <i class="fas fa-file-pdf"></i> Descargar Reporte PDF
+            </button>
+            <button id="savePlan" class="btn-secondary">
+                <i class="fas fa-save"></i> Guardar Plan
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
